@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import BlogCreate from './components/BlogCreate'
 import Navbar from './components/Navbar'
 import BlogDetails from './components/BlogDetails'
+import NotFound from './components/NotFound'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route path='/' element={<App />} />
         <Route path='/create' element={<BlogCreate />} />
         <Route path='/blogs/:id' element={<BlogDetails />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
